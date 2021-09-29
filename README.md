@@ -1,38 +1,32 @@
 # UCAS-OOP-21AU
 
-#### 介绍
+### 介绍
 中国科学院大学 2021学年秋季学期面向对象程序设计仓库
 Repository for UCAS Object-oriented Software Design and Construction (2021 Autumn)
 
-#### 软件架构
-软件架构说明
 
 
-#### 安装教程
+### 文件目录
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+```
+. 
+├── Assignment1
+│   ├── Assignment1.md
+│   └── Assignment1.pdf
+└── README.md
+```
 
 
-#### 特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### Assignment1: 设计类图
+
+* UML类图采用 [Mermaid](https://github.com/mermaid-js/mermaid) 语法生成。
+* 可以用支持渲染的编辑器（如 Typora ）查看 Markdown 文件，或直接预览导出的 pdf。
+
+
+
+
+
+### 鸣谢
+
+1.[使用Mermaid语法画UML类图](https://www.cnblogs.com/mybdss/p/14958781.html)
