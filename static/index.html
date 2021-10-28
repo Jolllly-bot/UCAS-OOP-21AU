@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页｜Jolllly's Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="css/design.css">
+    <script>
+        $(document)
+          .ready(function() {
+      
+            // fix main menu to page on passing
+            $('.main.menu').visibility({
+              type: 'fixed'
+            });
+            $('.overlay').visibility({
+              type: 'fixed',
+              offset: 80
+            });
+          })
+        ;
+        </script>
+</head>
+
+<body>
+    <!--header-->
+    <div class="ui borderless top fixed main menu">
+        <div class="ui container">
+            <h2 class="ui header item">
+                Jolllly's Blog
+            </h2>
+            <a href="main.html" class="active item"><i class="home icon"></i>首页</a>
+            <a href="type.html" class="item"><i class="list icon"></i>分类</a>
+            <a href="#" class="item"><i class="archive icon"></i>归档</a>
+            <a href="#" class="item"><i class="info icon"></i>关于我</a>
+        </div>
+    </div>
+        
+    <!--body-->
+    <br><br><br><br><br><br>
+    <div class="ui container">
+        <div class="ui mobile reversed stackable grid">
+            <!--left-->
+            <div class="eleven wide column">
+                <h2 class="ui header">最新文章</h2>
+                <!--passages-->
+                <div class="class ui cards">
+                    <div class="ui fluid card">
+                        <div class="image">
+                            <div class="ui yellow ribbon label">学习笔记</div>
+                            <img
+                                src="https://www.nbfox.com/wp-content/uploads/2020/03/11/20200311200816-5e694530f1fff.jpg">
+                        </div>
+                        <div class="content">
+                            <a class="header">作业写不完怎么办？</a>
+                            <div class="meta">
+                                <span class="date">today</span>
+                            </div>
+                            <div class="description">
+                                答：凉拌炒鸡蛋
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a href="#" target="_blank" class="ui small tag label">daily</a>
+                        </div>
+                    </div>
+
+                    <div class="ui fluid card">
+                        <div class="content">
+                            <div class="ui red ribbon label">踩坑经历</div>
+                            <a class="header">论verilog是不是世界上最好的语言</a>
+                            <div class="meta">
+                                <span class="date">three days ago</span>
+                            </div>
+                            <div class="description">
+                                是世界上最（不友）好的语言（之一）。
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a href="#" target="_blank" class="ui small tag label">verilog</a>
+                        </div>
+                    </div>
+
+                    <div class="ui fluid card">
+                        <div class="content">
+                            <div class="ui blue ribbon label">心得体会</div>
+                            <a class="header">再也不说别人网页设计得丑了</a>
+                            <div class="meta">
+                                <span class="date">three days ago</span>
+                            </div>
+                            <div class="description">
+                                理想很丰满，现实很骨感。
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a href="#" target="_blank" class="ui small tag label">前端</a>
+                        </div>
+                    </div>
+
+                    <div class="ui fluid card">
+                        <div class="content">
+                            <div class="ui blue ribbon label">心得体会</div>
+                            <a class="header">再也不说别人网页设计得丑了</a>
+                            <div class="meta">
+                                <span class="date">three days ago</span>
+                            </div>
+                            <div class="description">
+                                理想很丰满，现实很骨感。
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a href="#" target="_blank" class="ui small tag label">前端</a>
+                        </div>
+                    </div>
+                    <div class="ui fluid card">
+                        <div class="content">
+                            <div class="ui blue ribbon label">心得体会</div>
+                            <a class="header">再也不说别人网页设计得丑了</a>
+                            <div class="meta">
+                                <span class="date">three days ago</span>
+                            </div>
+                            <div class="description">
+                                理想很丰满，现实很骨感。
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a href="#" target="_blank" class="ui small tag label">前端</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+                <div class="attached right segment">
+
+                    <a href="type.html">
+                        <i class="angle double right icon"></i>
+                        继续逛逛...
+                    </a>
+                </div>
+                <br>
+            </div>
+
+            <!--right-->
+            <div class="five wide column">
+                <br><br>
+                <!--分类-->
+                <div class="ui vertical pointing fluid menu">
+                    <a href="type.html" class="item">
+                        <i class="list icon"></i>分类
+                    </a>
+                    <div class="ui secondary vertical pointing fluid menu">
+                        <a class="yellow active item">
+                            学习笔记
+                            <div class="ui label">51</div>
+                        </a>
+                        <a class="red active item">
+                            踩坑经历
+                            <div class="ui label">51</div>
+                        </a>
+                        <a class="blue active item">
+                            心得体会
+                            <div class="ui label">51</div>
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <!--标签-->
+                <div class="ui vertical pointing fluid menu">
+                    <a href="type.html" class="item">
+                        <i class="tag icon"></i>标签
+                    </a>
+                    
+                    <div class="ui attached segment">
+                        <div class="ui tag lables">
+                            <a href="#" target="_blank" class="ui small tag label">daily<div class="detail">10</div></a>
+                            <a href="#" target="_blank" class="ui small tag label">C/C++<div class="detail">10</div></a>
+                            <a href="#" target="_blank" class="ui small tag label">verilog<div class="detail">10</div></a>
+                            <a href="#" target="_blank" class="ui small tag label">Java<div class="detail">10</div></a>
+                            <a href="#" target="_blank" class="ui small tag label">前端<div class="detail">10</div></a>
+                        </div>
+                    </div> 
+                </div>
+                <br>
+                <!--推荐-->
+                <div class="ui vertical pointing fluid menu">
+                    <div class="item">
+                        推荐
+                    </div>
+                    <a href="nonogram.html" class="item">计科导写的小游戏</a>
+                    <a href="nonogram.html" class="item">计科导写的小游戏</a>
+                    <a href="nonogram.html" class="item">计科导写的小游戏</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--footer-->
+    <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+            <div class="ui stackable inverted divided grid">
+                <div class="three wide column">
+                    <h4 class="ui inverted header">Group 1</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Link One</a>
+                        <a href="#" class="item">Link Two</a>
+                        <a href="#" class="item">Link Three</a>
+                        <a href="#" class="item">Link Four</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">Group 2</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Link One</a>
+                        <a href="#" class="item">Link Two</a>
+                        <a href="#" class="item">Link Three</a>
+                        <a href="#" class="item">Link Four</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">Group 3</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Link One</a>
+                        <a href="#" class="item">Link Two</a>
+                        <a href="#" class="item">Link Three</a>
+                        <a href="#" class="item">Link Four</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header">Footer Header</h4>
+                    <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <img src="assets/images/logo.png" class="ui centered mini image">
+            <div class="ui horizontal inverted small divided link list">
+                <a class="item" href="#">Site Map</a>
+                <a class="item" href="#">Contact Us</a>
+                <a class="item" href="#">Terms and Conditions</a>
+                <a class="item" href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <!--引入semantic UI-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+</body>
+
+</html>

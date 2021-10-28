@@ -1,0 +1,349 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>数织-来玩个小游戏吧</title>
+        <style>
+            .button {
+                background-color:darkkhaki;
+                border: none;
+                color: white;
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div align="center">
+            <h1 style="background-color: lightsalmon;">数织nonogram</h1>
+            <h3>Nonogram是一个源于日本的逻辑游戏，简单快乐易中毒，甚至还是一个<i>NP-完全 </i>问题~</h3>
+            <p style="background-color:khaki;">
+                <b>>玩法简介</b><br>点击格子涂色<br>每行/列旁的数字<b>依次</b>对应这一行/列中有色格子的数目<br>数的大小代表对应段的<b>长度</b><br>
+                不同的两段有色格子<b>不能连接在一起</b>，必须被<b>至少一个</b>不涂色的格子隔开<br>点击X切换模式，标灰不可能涂色的格子
+            </p>
+            <h4>啊这，规则看蒙了？<br>实践出真知，来玩一把最基础的就懂了!</h4><br>
+        </div>
+
+        <h3 style="text-align: center">>>新手入门：5*5 <span id="answer1" style="color: tomato;"></span></h3>
+        <table cellspacing="0" cellpadding="0" align="center" width="175">
+            <tr>
+                <td align="right">1</td><td align="right">5</td><td align="right">1<br>3</td><td align="right">5</td><td align="right">2</td>
+            </tr>
+        </table>
+        <table align="center">
+            <tr>
+                <td><table cellspacing="0" cellpadding="0" align="center" Height="165">
+                    <tr><td align="center">3</td></tr>
+                    <tr><td align="center">1 , 1</td></tr>
+                    <tr><td align="center">4</td></tr>
+                    <tr><td align="center">4</td></tr>
+                    <tr><td align="center">4</td></tr>
+                </table></td>
+                <td><table id="board1" cellspacing="0" cellpadding="0" align="center" border="4px solif #000"></table></td>
+            </tr>
+        </table>
+        <br>
+        <div style="text-align: center">
+            生命：<span id="life1" >❤❤❤</span>
+            <button class="button" id="1" onclick="DrawOn(),test(1)" style="background-color: darksalmon;">涂色</button>
+            <button class="button" id="2" onclick="DrawOff(),test(2)">X</button>     
+        </div><br><br>
+
+        <h3 style="text-align: center;">>>小试牛刀：10*10 <span id="answer2" style="color: tomato;"></span></h3>
+        <table cellspacing="0" cellpadding="0" align="center" width="360">
+            <tr>
+                <td>&nbsp&nbsp</td><td align="right">3</td><td align="right">6</td><td align="right">8</td><td align="right">4<br>3</td><td align="right">3<br>2<br>3</td>
+                <td align="right">3<br>2<br>3</td><td align="right">3<br>4</td><td align="right">8</td><td align="right">6</td><td align="right">3</td>
+            </tr>
+        </table>
+        <table align="center">
+            <tr>
+                <td><table cellspacing="0" cellpadding="0" align="center" Height="310">
+                    <tr><td align="center">3</td></tr>
+                    <tr><td align="center">6</td></tr>
+                    <tr><td align="center">8</td></tr>
+                    <tr><td align="center">3 , 4</td></tr>
+                    <tr><td align="center">3 , 2 , 3</td></tr>
+                    <tr><td align="center">3 , 2 , 3</td></tr>
+                    <tr><td align="center">4 , 3</td></tr>
+                    <tr><td align="center">8</td></tr>
+                    <tr><td align="center">6</td></tr>
+                    <tr><td align="center">3</td></tr>
+                </table></td>
+                <td><table id="board2" cellspacing="0" cellpadding="0" align="center" border="4px solif #000"></table></td>
+            </tr>
+        </table>
+        <br>
+        <div style="text-align: center">
+            生命：<span id="life2">❤❤❤</span>
+            <button class="button" id="3" onclick="DrawOn(),test(3)">涂色</button>
+            <button class="button" id="4" onclick="DrawOff(),test(4)">X</button>     
+        </div><br><br>
+    
+        <h3 style="text-align: center;">>>渐入佳境：10*10 <span id="answer4" style="color: tomato;"></span></h3>
+        <table cellspacing="0" cellpadding="0" align="center" width="360">
+            <tr>
+                <td>&nbsp&nbsp</td><td align="right">2<br>2</td><td align="right">2<br>2</td><td align="right">3</td><td align="right">4</td><td align="right">2<br>2</td>
+                <td align="right">2<br>2</td><td align="right">3<br>3</td><td align="right">2<br>2</td><td align="right">8</td><td align="right">8</td>
+            </tr>
+        </table>
+        <table align="center">
+            <tr>
+                <td><table cellspacing="0" cellpadding="0" align="center" Height="310">
+                    <tr><td align="center">2</td></tr>
+                    <tr><td align="center">5</td></tr>
+                    <tr><td align="center">1 , 3 , 2</td></tr>
+                    <tr><td align="center">2 , 2 , 2</td></tr>
+                    <tr><td align="center">3 , 2</td></tr>
+                    <tr><td align="center">2 , 2</td></tr>
+                    <tr><td align="center">4 , 2</td></tr>
+                    <tr><td align="center">2 , 3 , 2</td></tr>
+                    <tr><td align="center">1 , 5</td></tr>
+                    <tr><td align="center">2</td></tr>
+                </table></td>
+                <td><table id="board4" cellspacing="0" cellpadding="0" align="center" border="4px solif #000"></table></td>
+            </tr>
+        </table>
+        <br>
+        <div style="text-align: center">
+            生命：<span id="life4">❤❤❤</span>
+            <button class="button" id="7" onclick="DrawOn(),test(7)">涂色</button>
+            <button class="button" id="8" onclick="DrawOff(),test(8)">X</button>     
+        </div><br>
+
+        <h3 style="text-align: center;">>>挑战自我：10*10 <span id="answer3" style="color: tomato;"></span></h3>
+        <table cellspacing="0" cellpadding="0" align="center" width="380">
+            <tr>
+                <td>&nbsp&nbsp</td><td align="right">10</td><td align="right">1<br>2<br>1</td><td align="right">4<br>2</td><td align="right">5</td><td align="right">4<br>1<br>1</td>
+                <td align="right">1<br>1<br>4</td><td align="right">1<br>3</td><td align="right">7<br>1</td><td align="right">2<br>2<br>1<br>1</td><td align="right">1<br>1<br>1<br>3</td>
+            </tr>
+        </table>
+        <table align="center">
+            <tr>
+                <td><table cellspacing="0" cellpadding="0" align="center" Height="310">
+                    <tr><td align="center">1 , 1 , 3 , 1</td></tr>
+                    <tr><td align="center">1 , 1 , 1 , 2</td></tr>
+                    <tr><td align="center">1 , 1 , 1 , 3</td></tr>
+                    <tr><td align="center">3 , 4 , 1</td></tr>
+                    <tr><td align="center">1 , 3</td></tr>
+                    <tr><td align="center">5 , 3</td></tr>
+                    <tr><td align="center">4 , 1 , 1</td></tr>
+                    <tr><td align="center">1 , 3 , 3</td></tr>
+                    <tr><td align="center">1 , 1 , 1 , 1</td></tr>
+                    <tr><td align="center">2 , 1 , 1 , 3</td></tr>
+                </table></td>
+                <td><table id="board3" cellspacing="0" cellpadding="0" align="center" border="4px solif #000"></table></td>
+            </tr>
+        </table>
+        <br>
+        <div style="text-align: center">
+            生命：<span id="life3">❤❤❤</span>
+            <button class="button" id="5" onclick="DrawOn(),test(5)">涂色</button>
+            <button class="button" id="6" onclick="DrawOff(),test(6)">X</button>     
+        </div><br>
+
+
+        <p style="color: silver;" align="center">
+            <b>Special thanks to:</b><br>
+            <a href="https://mp.weixin.qq.com/s/tjP9IvS4g5k6oPJT4S7LYg">清华校庆挑战</a>提供的灵感<br>
+            动画参考：网页实验参考示例<a href="https://teacher.solid.things.ac.cn:7243/public/web/chessboard_3.html">chessboard</a><br>
+            <!--吐槽一下，chessboard这段代码有个bug，indexOf这个函数遇到不存在的返回值是-1不是0，我还自己帮de了，不过这个方法是真的挺巧的-->
+            debug：实验4班的助教 参与图案设计：Martian 
+        </p>
+
+        <script>
+            var t=1
+            function test(x){
+                if(x==1 && t==1){
+                    document.getElementById(x).style.background="darksalmon";
+	            }else if(x != t){
+                    if (x%2 != 0){
+                        document.getElementById(x).style.background="darksalmon";
+                    }else{
+                        document.getElementById(x).style.background="darkgrey";
+                    }
+	                document.getElementById(t).style.background="darkkhaki";
+	            }	
+                t=x;
+            }
+
+            var count1=0, count2=0, count3=0, count4=0
+            var li1 = 3 , li2=3, li3 = 3, li4=3
+            
+            //board1 
+            var life1 = document.getElementById("life1"); 
+            var board1 = document.getElementById("board1");
+            var row1=5,col1=5,cellWidth=30,cellHeight=30;
+            var answer1 = "《debug的好朋友小黄鸭》";
+            var picture1 = new Array();
+            for(let k=0;k<row1;k++) picture1[k]=new Array(col1);
+            for(let l=0;l<col1;l++) picture1[l][1]="gold",picture1[l][2]="gold",picture1[l][3]="gold";
+            picture1[3][3]="orange",picture1[3][4]="orange",picture1[4][4]="gold",picture1[1][2]=null,picture1[2][0]="darkorange";
+
+            //board2
+            var life2 = document.getElementById("life2"); 
+            var board2 = document.getElementById("board2");
+            var answer2 = "《写网页的好朋友Google Chrome》";
+            var picture2 = new Array();
+            for(let k=0;k<10;k++) picture2[k]=new Array(10);
+            picture2[0][3]="red";picture2[0][4]="red";picture2[0][5]="red";
+            for(let i=2;i<8;i++) picture2[1][i]="red";
+            for(let i=1;i<9;i++) picture2[2][i]="red";
+            picture2[3]=[null,"green","red","red",null,null,"gold","gold","gold","gold"];
+            picture2[4]=["green","green","green",null,"royalblue","royalblue",null,"gold","gold","gold"];
+            picture2[5]=["green","green","green",null,"royalblue","royalblue",null,"gold","gold","gold"];
+            picture2[6]=["green","green","green","green",null,null,"gold","gold","gold",null];
+            picture2[7]=[null,"green","green","green","green","green","gold","gold","gold",null];
+            picture2[8]=[null,null,"green","green","green","green","gold","gold",null,null];
+            picture2[9][4]="green";picture2[9][5]="gold";picture2[9][6]="gold";
+
+            //board3
+            var life3 = document.getElementById("life3")
+            var board3 = document.getElementById("board3")
+            var answer3 = "《UCAS·二进制·信息隐藏》";
+            var picture3 = new Array();
+            for(let k=0;k<10;k++) picture3[k]=new Array(10);
+            picture3[0]=["rgb(23,73,148)",null,"rgb(23,73,148)",null,"rgb(23,73,148)","rgb(23,73,148)","rgb(23,73,148)",null,null,"grey"]
+            picture3[1]=["rgb(23,73,148)",null,"rgb(23,73,148)",null,"rgb(23,73,148)",null,null,"silver","grey",null]
+            picture3[2]=["rgb(23,73,148)",null,"rgb(23,73,148)",null,"rgb(23,73,148)",null,"silver","silver","grey",null]
+            picture3[3]=["rgb(23,73,148)","rgb(23,73,148)","rgb(23,73,148)",null,"rgb(23,73,148)","rgb(23,73,148)","rgb(23,73,148)","silver",null,"grey"]
+            picture3[4]=["darkgrey",null,null,null,null,null,"silver","silver","silver",null]
+            picture3[5]=["darkgrey","goldenrod","firebrick","firebrick","rgb(23,73,148)",null,null,"rgb(23,73,148)","rgb(23,73,148)","rgb(23,73,148)"]
+            picture3[6]=["darkgrey","firebrick","firebrick","rgb(23,73,148)",null,"rgb(23,73,148)",null,"rgb(23,73,148)",null,null]
+            picture3[7]=["darkgrey",null,null,"rgb(23,73,148)","rgb(23,73,148)","rgb(23,73,148)",null,"rgb(23,73,148)","rgb(23,73,148)","rgb(23,73,148)"]
+            picture3[8]=["darkgrey",null,null,"rgb(23,73,148)",null,"rgb(23,73,148)",null,null,null,"rgb(23,73,148)"]
+            picture3[9]=["darkgrey","darkgrey",null,"rgb(23,73,148)",null,"rgb(23,73,148)",null,"rgb(23,73,148)","rgb(23,73,148)","rgb(23,73,148)"]
+            
+            //board4
+            var life4 = document.getElementById("life4")
+            var board4 = document.getElementById("board4")
+            var picture4 = new Array();
+            var answer4 = "《码代码的好朋友VSCode》";
+            var x=0
+            for(let k=0;k<10;k++) picture4[k]=new Array(10);
+            for(let i=1;i<9;i++) picture4[i][8]="rgb(120,178,216)",picture4[i][9]="rgb(120,178,216)";
+            for(let i=2;i<10;i++) picture4[i][x-1]="rgb(59,140,206)",picture4[i][x]="rgb(59,140,206)",x+=1;
+            picture4[0][7]="rgb(120,178,216)",picture4[9][7]="rgb(120,178,216)",picture4[8][7]="rgb(59,140,206)",picture4[7][6]="rgb(59,140,206)"
+            picture4[0][6]="rgb(47,93,191)",picture4[1][6]="rgb(47,93,191)",picture4[1][5]="rgb(47,93,191)",picture4[1][7]="rgb(47,93,191)"
+            picture4[2][6]="rgb(47,93,191)",picture4[2][5]="rgb(47,93,191)",picture4[2][4]="rgb(47,93,191)"
+            picture4[3][4]="rgb(47,93,191)",picture4[3][3]="rgb(47,93,191)",picture4[4][3]="rgb(47,93,191)",picture4[8][0]="rgb(47,93,191)"
+            picture4[6][1]="rgb(47,93,191)",picture4[6][2]="rgb(47,93,191)",picture4[7][1]="rgb(47,93,191)",picture4[7][0]="rgb(47,93,191)"
+
+            var draw = true;
+            function DrawOn(){draw=true;}
+            function DrawOff(){draw=false;}
+
+            DrawBoard(board1,5,5);
+            DrawBoard(board2,10,10);
+            DrawBoard(board4,10,10);
+            DrawBoard(board3,10,10);
+        
+            function DrawBoard(table,row,col){
+                var n = table.id.slice(5,6);
+                var i,j;
+                var count = window["count" + n];
+                var li = window["li" + n];
+                for(i=0;i<row;i++){
+                    var newRow = document.createElement("tr");
+                    table.appendChild(newRow);
+                    for(j=0;j<col;j++){
+                        var newCell = document.createElement("td");
+                        newCell.setAttribute("id","cell_"+i+"_"+j+"_"+n);
+                        newCell.style.width = cellWidth + "px";
+                        newCell.style.height = cellHeight + "px";
+                        newCell.style.background = "white";
+                        newRow.appendChild(newCell);
+                        newCell.onmouseover = function(){
+                            if (this.style.background == "white") {
+                                switch(draw){
+                                    case false: this.style.background = "gainsboro";break;
+                                    case true: this.style.background = "mistyrose";break;}}};
+                        newCell.onmouseout = function(){
+                            if (this.style.background=="gainsboro" || this.style.background=="mistyrose"){this.style.background = "white";}};
+                        newCell.onmousedown = function() { 
+                            if (this.style.background=="gainsboro" || this.style.background=="white" || this.style.background=="mistyrose") {
+                                var test = Draw(this)
+                                var life = window["life" + n];
+                                //console.log(test)
+                                //console.log(li)
+                                if (test == true){
+                                    count+=1;
+                                }else{
+                                    switch (li) {
+                                        case 1: alert("你死了，三颗心拿去，重新试试吧！");location.reload();break;
+                                        case 2: life.innerHTML = "❤";li-=1;break;
+                                        case 3: life.innerHTML = "❤❤";li-=1;break;
+                                    }
+                                };
+                                //console.log("count=%d",count)
+                                //console.log(li)
+                            }
+                            if (count == row*col) {show(table,n,row,col);count=0;}
+                        };
+                        
+                    }
+                }
+            }
+
+            var pause = 30;
+            function show(table,n,row,col){
+                var boardStr = "";
+                var oldBoardStr = table.innerHTML;
+                var picture = window["picture" + n]
+                var answer = window["answer" + n]
+                var time = 0
+                for(let i=0;i<row;i++){
+                    boardStr += "<tr>"
+                    for(let j=0;j<col;j++){
+                        boardStr += "<td id='cell_"+i+"_"+j+"' style='width:"+ cellWidth +"px;height:" + cellHeight+ "px;background:"+ picture[i][j] +";'></td>";
+                        var next_i = (j==col-1)?i+1:i; 
+                        var next_j = (j==col-1)?0:j+1;
+                        if (next_i != row){
+                            var temStr = boardStr + ((j==col-1)?"</tr>":"") + oldBoardStr.substr(oldBoardStr.indexOf("<td id=\"cell_"+next_i+"_"+next_j));
+                        }else{
+                            var temStr = boardStr + "</tr>"
+                        }
+                        //console.log(temStr)
+                        time += pause
+                        setTimeout(changeImage,time,temStr,n);
+                    }
+                }
+                document.getElementById("answer" + n).innerHTML = answer
+            }
+
+            function changeImage(temStr,n){
+                document.getElementById("board"+n).innerHTML = temStr;
+            }
+            
+            
+            function Draw(cell){
+                var id = cell.id;
+                var r = id.slice(5,6);
+                var c = id.slice(7,8);
+                var i = id.slice(9,10);
+                //console.log(id)
+                /*console.log(i)
+                console.log(r);
+                console.log(c);
+                console.log(cell);
+                console.log(li);*/
+                var test = DoDraw(i,r,c);
+                return test
+            
+
+            function DoDraw(i,r,c){
+                var picture = window["picture"+i];
+                var test = true
+                if (draw == true & picture[r][c] != null){
+                    cell.style.background = "salmon";
+                }else if(draw == false & picture[r][c] == null){
+                    cell.style.background = "grey";
+                }else{
+                    test = false
+                } 
+                return test
+            }
+            }
+                
+        </script>
+    </body>
+</html>
