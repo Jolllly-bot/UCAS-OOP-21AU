@@ -1,36 +1,25 @@
-# UCAS-OOP-21AU
+UCAS-OOP-21AU
+===========
 
-### 介绍
+## 介绍
 中国科学院大学 2021学年秋季学期面向对象程序设计仓库
 
 Repository for UCAS Object-oriented Software Design and Construction (2021 Autumn)
 
 
 
-### 文件目录
+## 仓库目录
 
-```
-.
-├── Assignment1
-│   ├── Assignment1.md
-│   ├── car.png
-│   └── library.png
-├── README.md
-├── static              #网页设计
-│   ├── css
-│   │   └── design.css
-│   ├── index.html
-│   ├── login.html
-│   ├── nonogram.html
-│   └── type.html
-└── 大作业文档
-		├── 1-功能分析与建模.pdf
-    └── 1-功能分析与建模.md
-```
+* [Assignment1](./Assignment1) - 设计类图作业
+
+* [大作业文档](./大作业文档) -（md & pdf)
+
+    * [1-功能分析与建模](/大作业文档/1-功能分析与建模.md)
+
+* [static](./static) - 博客网页设计（css & html)
 
 
-
-### Assignment1: 设计类图
+## Assignment1: 设计类图
 
 * UML类图采用轻量级的 [Mermaid](https://github.com/mermaid-js/mermaid) 语法生成。
 
@@ -38,10 +27,9 @@ Repository for UCAS Object-oriented Software Design and Construction (2021 Autum
 
   
 
-### 大作业选题：设计实现一个博客
+## 大作业选题：设计实现一个博客
 
+- doing...
 
+### Change Log
 
-### 鸣谢
-
-1.[使用Mermaid语法画UML类图](https://www.cnblogs.com/mybdss/p/14958781.html)
