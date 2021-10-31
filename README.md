@@ -29,7 +29,7 @@ Repository for UCAS Object-oriented Software Design and Construction (2021 Autum
 
 ## 大作业选题：设计实现一个博客
 
-- doing...
+- [戳这里](http://jolllly.gitee.io/ucas-oop-21au/) 查看用gitee pages 简单部署的静态页面，方便设计预览。
 
 ### Change Log
 
