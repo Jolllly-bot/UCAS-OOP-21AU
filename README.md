@@ -11,12 +11,13 @@ Repository for UCAS Object-oriented Software Design and Construction (2021 Autum
 ## 仓库目录
 
 * [Assignment1](./Assignment1) - 设计类图作业
+* [Docs](./Docs) -设计实现大作业文档（md & pdf)
+    * [1-功能分析与建模](/Docs/1-功能分析与建模.md)
+    * [2-核心流程设计分析](/Docs/2-核心流程设计分析.md)
+* [blog](./blog) - 博客工程目录
+* [static](./static) - 博客静态网页设计（目前用gitee pages简单部署了一个[预览页面](http://jolllly.gitee.io/ucas-oop-21au/))
 
-* [大作业文档](./大作业文档) -（md & pdf)
 
-    * [1-功能分析与建模](/大作业文档/1-功能分析与建模.md)
-
-* [static](./static) - 博客网页设计（css & html)
 
 
 ## Assignment1: 设计类图
@@ -28,8 +29,4 @@ Repository for UCAS Object-oriented Software Design and Construction (2021 Autum
   
 
 ## 大作业选题：设计实现一个博客
-
-- [戳这里](http://jolllly.gitee.io/ucas-oop-21au/) 查看用gitee pages 简单部署的静态页面，方便设计预览。
-
-### Change Log
 
