@@ -12,12 +12,14 @@ public class Blog {
     @GeneratedValue
     private Long id;           //唯一的查询id
 
-	private String tile;       //标题
+	private String title;       //标题
 	private String content;      //内容
 	private String cover;        //封面
 	private Date createTime;  //创建时间
 	private Date editTime;    //最后修改时间
     private boolean published;  //是否发布
+    private boolean recommend;  //推荐
+
 
     @ManyToOne
     private Type type;
@@ -32,8 +34,8 @@ public class Blog {
         this.id = id;
     }
 
-    public void setTile(String tile) {
-        this.tile = tile;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public void setContent(String content) {
@@ -56,12 +58,37 @@ public class Blog {
         this.published = published;
     }
 
+    public boolean isRecommend() {
+        return recommend;
+    }
+
+    public void setRecommend(boolean recommend) {
+        this.recommend = recommend;
+    }
+
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
     public Long getId() {
         return id;
     }
 
-    public String getTile() {
-        return tile;
+    public String getTitle() {
+        return title;
     }
 
     public String getContent() {
